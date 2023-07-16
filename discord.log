@@ -1,25 +1,131 @@
 WARNING:nextcord.client:PyNaCl is not installed, voice will NOT be supported
 INFO:root:Loading cog: text2vid
-INFO:root:Loading cog: leo
-INFO:root:Loading cog: sdxl
+ERROR:root:Failed to load cog: text2vid. Error: Extension 'cogs.text2vid' has no 'setup' function.
+INFO:root:Loading cog: stable
 INFO:nextcord.client:logging in using static token
 INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:8080
- * Running on http://172.31.196.32:8080
+ * Running on http://172.31.196.29:8080
 INFO:werkzeug:[33mPress CTRL+C to quit[0m
-INFO:werkzeug:172.31.196.1 - - [15/Jul/2023 20:24:06] "[33mOPTIONS * HTTP/1.1[0m" 404 -
-INFO:werkzeug:172.31.196.1 - - [15/Jul/2023 20:24:07] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [16/Jul/2023 17:51:31] "[33mOPTIONS * HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.31.196.1 - - [16/Jul/2023 17:51:31] "GET / HTTP/1.1" 200 -
 INFO:nextcord.gateway:Shard ID None has sent the IDENTIFY payload.
-INFO:nextcord.gateway:Shard ID None has connected to Gateway: ["gateway-prd-us-east1-c-tzc7",{"micros":163829,"calls":["id_created",{"micros":2509,"calls":[]},"session_lookup_time",{"micros":632,"calls":[]},"session_lookup_finished",{"micros":20,"calls":[]},"discord-sessions-prd-2-59",{"micros":157817,"calls":["start_session",{"micros":82569,"calls":["discord-api-5957c88d5b-zrm92",{"micros":77399,"calls":["get_user",{"micros":18273},"get_guilds",{"micros":4992},"send_scheduled_deletion_message",{"micros":11},"guild_join_requests",{"micros":3354},"authorized_ip_coro",{"micros":13}]}]},"starting_guild_connect",{"micros":65,"calls":[]},"presence_started",{"micros":36131,"calls":[]},"guilds_started",{"micros":90,"calls":[]},"guilds_connect",{"micros":2,"calls":[]},"presence_connect",{"micros":38912,"calls":[]},"connect_finished",{"micros":38918,"calls":[]},"build_ready",{"micros":20,"calls":[]},"clean_ready",{"micros":0,"calls":[]},"optimize_ready",{"micros":22,"calls":[]},"split_ready",{"micros":1,"calls":[]}]}]}] (Session ID: 65bf4786e47e30a865fcc833c32d3bc6). Resume URL specified as wss://gateway-us-east1-c.discord.gg
-INFO:werkzeug:172.31.196.1 - - [15/Jul/2023 20:24:07] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [16/Jul/2023 17:51:31] "GET / HTTP/1.1" 200 -
+INFO:nextcord.gateway:Shard ID None has connected to Gateway: ["gateway-prd-us-east1-b-5rb6",{"micros":149968,"calls":["id_created",{"micros":1045,"calls":[]},"session_lookup_time",{"micros":3364,"calls":[]},"session_lookup_finished",{"micros":17,"calls":[]},"discord-sessions-prd-2-64",{"micros":145093,"calls":["start_session",{"micros":80078,"calls":["discord-api-5957c88d5b-qdlzx",{"micros":68375,"calls":["get_user",{"micros":23180},"get_guilds",{"micros":6745},"send_scheduled_deletion_message",{"micros":12},"guild_join_requests",{"micros":805},"authorized_ip_coro",{"micros":11}]}]},"starting_guild_connect",{"micros":50,"calls":[]},"presence_started",{"micros":29287,"calls":[]},"guilds_started",{"micros":83,"calls":[]},"guilds_connect",{"micros":2,"calls":[]},"presence_connect",{"micros":35544,"calls":[]},"connect_finished",{"micros":35550,"calls":[]},"build_ready",{"micros":17,"calls":[]},"clean_ready",{"micros":1,"calls":[]},"optimize_ready",{"micros":25,"calls":[]},"split_ready",{"micros":0,"calls":[]}]}]}] (Session ID: 3062883958f71e55b6e2caa6f625bea5). Resume URL specified as wss://gateway-us-east1-b.discord.gg
+INFO:werkzeug:172.31.196.1 - - [16/Jul/2023 17:51:31] "GET / HTTP/1.1" 200 -
 INFO:root:Bot has connected to Discord!
-INFO:root:Received /sdxl command with prompt: wild young woman dancing in the night club, short pleated skirt, white shirt, pigtails, wide green eyes, disco lights surround her, crowd watches from the dancefloor sides applauding her dance skills
-INFO:root:Successfully saved job ID: 28729991 for user ID: 701381748843610163
-INFO:root:Sending request to upscale API with URL: https://cdn.stablediffusionapi.com/generations/bc24ecc3-ffbe-4589-b430-f02ef06e0226-0.png
+INFO:root:Received /stable command with prompt: an alpine vista, evergreens, snow capped peaks
+INFO:root:Successfully saved job ID: 28925048 for user ID: 701381748843610163
+INFO:root:Received /stable command with prompt: movie scene, ((the running man)), ((Arnold)), dystopian city street, neon lit billboards, pollution, grime, volumetric fog, shot 2/3 angle,
+INFO:root:Successfully saved job ID: 28925511 for user ID: 701381748843610163
+INFO:root:Sending request to upscale API with URL: https://cdn.stablediffusionapi.com/generations/0-cf1fbdc3-f2ce-45db-a55d-5fc8ad9a486c.png
 INFO:root:Status code: 200
-INFO:root:Response content: {"status":"success","generationTime":9.651925325393677,"id":28730048,"output":"https:\/\/cdn.stablediffusionapi.com\/generations\/1689452721_out.png"}
-INFO:root:result_url: https://cdn.stablediffusionapi.com/generations/1689452721_out.png
-INFO:werkzeug:172.31.196.1 - - [15/Jul/2023 20:26:28] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [15/Jul/2023 20:31:28] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [15/Jul/2023 20:36:28] "HEAD / HTTP/1.1" 200 -
+INFO:root:Response content: {"status":"success","generationTime":7.973271608352661,"id":28925619,"output":"https:\/\/cdn.stablediffusionapi.com\/generations\/1689530147_out.png"}
+INFO:root:result_url: https://cdn.stablediffusionapi.com/generations/1689530147_out.png
+INFO:werkzeug:172.31.196.1 - - [16/Jul/2023 17:56:28] "HEAD / HTTP/1.1" 200 -
+INFO:root:Received /stable command with prompt: strigoi vampire, (((The Strain))), draining a victim, New York alley, night, moonlight,
+INFO:root:Successfully saved job ID: 28926163 for user ID: 701381748843610163
+INFO:root:Sending request to upscale API with URL: https://cdn.stablediffusionapi.com/generations/9d5204ac-2e9b-4a78-a4f4-273e4cfd92a7-0.png
+INFO:root:Status code: 200
+INFO:root:Response content: {"status":"success","generationTime":7.910919189453125,"id":28926305,"output":"https:\/\/cdn.stablediffusionapi.com\/generations\/1689530402_out.png"}
+INFO:root:result_url: https://cdn.stablediffusionapi.com/generations/1689530402_out.png
+INFO:werkzeug:172.31.196.1 - - [16/Jul/2023 18:01:28] "HEAD / HTTP/1.1" 200 -
+INFO:root:Received /stable command with prompt: Strigoi vampire, prowling in the moonlight, New York, (((The Strain))), dead, long stinger,
+INFO:root:Successfully saved job ID: 28927096 for user ID: 701381748843610163
+INFO:root:Sending request to upscale API with URL: https://cdn.stablediffusionapi.com/generations/0-e382a692-60ed-4b07-8fc8-6453f1695bf5.png
+INFO:root:Status code: 200
+INFO:root:Response content: {"status":"success","generationTime":10.913753509521484,"id":28927281,"output":"https:\/\/cdn.stablediffusionapi.com\/generations\/1689530770_out.png"}
+INFO:root:result_url: https://cdn.stablediffusionapi.com/generations/1689530770_out.png
+INFO:werkzeug:172.31.196.1 - - [16/Jul/2023 18:06:28] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [16/Jul/2023 18:11:28] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [16/Jul/2023 18:16:28] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [16/Jul/2023 18:21:28] "HEAD / HTTP/1.1" 200 -
+INFO:root:Received /stable command with prompt: a busty party girl, short pleated skirt, tight top, disco, rollerblading,
+INFO:root:Successfully saved job ID: 28929899 for user ID: 701381748843610163
+INFO:root:Received /stable command with prompt: fun party girl, short pleated skirt, roller disco, happy smiling, pigtails, sense of motion,
+INFO:root:Successfully saved job ID: 28930378 for user ID: 701381748843610163
+INFO:root:Sending request to upscale API with URL: https://cdn.stablediffusionapi.com/generations/0-9e37aa58-d156-4b4d-8f57-d4a377adfc06.png
+INFO:root:Status code: 200
+INFO:root:Response content: {"status":"success","generationTime":11.637693166732788,"id":28930486,"output":"https:\/\/cdn.stablediffusionapi.com\/generations\/1689531959_out.png"}
+INFO:root:result_url: https://cdn.stablediffusionapi.com/generations/1689531959_out.png
+INFO:werkzeug:172.31.196.1 - - [16/Jul/2023 18:26:28] "HEAD / HTTP/1.1" 200 -
+INFO:root:Received /stable command with prompt: hippy girl, exploring, jungle, sweating, cute outfit,
+INFO:root:Successfully saved job ID: 28930909 for user ID: 701381748843610163
+INFO:root:Sending request to upscale API with URL: https://cdn.stablediffusionapi.com/generations/0-3f118254-e176-4228-b076-5a8e329f4eef.png
+INFO:root:Status code: 200
+INFO:root:Response content: {"status":"success","generationTime":7.32853889465332,"id":28931049,"output":"https:\/\/cdn.stablediffusionapi.com\/generations\/1689532137_out.png"}
+INFO:root:result_url: https://cdn.stablediffusionapi.com/generations/1689532137_out.png
+INFO:werkzeug:172.31.196.1 - - [16/Jul/2023 18:31:28] "HEAD / HTTP/1.1" 200 -
+INFO:root:Received /stable command with prompt: cute girl, wide eyed with anticipation, roulette table, casino
+INFO:root:Successfully saved job ID: 28931760 for user ID: 701381748843610163
+INFO:root:Sending request to upscale API with URL: https://cdn.stablediffusionapi.com/generations/0-e14c8fc8-0b95-4ca0-bee3-548c1f98fb03.png
+INFO:root:Status code: 200
+INFO:root:Response content: {"status":"success","generationTime":7.562433481216431,"id":28931884,"output":"https:\/\/cdn.stablediffusionapi.com\/generations\/1689532420_out.png"}
+INFO:root:result_url: https://cdn.stablediffusionapi.com/generations/1689532420_out.png
+INFO:werkzeug:172.31.196.1 - - [16/Jul/2023 18:36:28] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [16/Jul/2023 18:41:28] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [16/Jul/2023 18:46:28] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [16/Jul/2023 18:51:28] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [16/Jul/2023 18:56:28] "HEAD / HTTP/1.1" 200 -
+INFO:root:Received /stable command with prompt: the gang, hustling at the casino
+INFO:root:Successfully saved job ID: 28936037 for user ID: 701381748843610163
+INFO:root:Sending request to upscale API with URL: https://cdn.stablediffusionapi.com/generations/0-69720600-1e97-4a78-ba0e-460446c33151.png
+INFO:root:Status code: 200
+INFO:root:Response content: {"status":"success","generationTime":14.724718809127808,"id":28936277,"output":"https:\/\/cdn.stablediffusionapi.com\/generations\/1689533965_out.png"}
+INFO:root:result_url: https://cdn.stablediffusionapi.com/generations/1689533965_out.png
+INFO:root:Received /stable command with prompt: gang boss, sitting behind large desk, looks like Matt Damon, game play cut scene
+INFO:root:Successfully saved job ID: 28936480 for user ID: 701381748843610163
+INFO:werkzeug:172.31.196.1 - - [16/Jul/2023 19:01:28] "HEAD / HTTP/1.1" 200 -
+INFO:root:Sending request to upscale API with URL: https://cdn.stablediffusionapi.com/generations/0-40e881e8-9eaa-4247-8bf9-b0c95c53c22f.png
+INFO:root:Status code: 200
+INFO:root:Response content: {"status":"success","generationTime":7.702436923980713,"id":28936632,"output":"https:\/\/cdn.stablediffusionapi.com\/generations\/1689534100_out.png"}
+INFO:root:result_url: https://cdn.stablediffusionapi.com/generations/1689534100_out.png
+INFO:root:Received /stable command with prompt: Patrick Stewart, stylish dark suit, subject next to a Maserati, gameplay cut scene,
+INFO:root:Successfully saved job ID: 28937349 for user ID: 701381748843610163
+INFO:werkzeug:172.31.196.1 - - [16/Jul/2023 19:06:28] "HEAD / HTTP/1.1" 200 -
+INFO:root:Received /stable command with prompt: gang boss, in workshop, sports car, looks like Patrick Stewart, gameplay cut scene,
+INFO:root:Successfully saved job ID: 28937774 for user ID: 701381748843610163
+INFO:root:Received /stable command with prompt: GTA-V gang boss, sat at a large desk, (warehouse scene), subject looks like Patrick Stewart,
+INFO:root:Successfully saved job ID: 28938250 for user ID: 701381748843610163
+INFO:root:Sending request to upscale API with URL: https://cdn.stablediffusionapi.com/generations/0-46323aed-ab4f-4f69-9d13-2cafe59e2221.png
+INFO:werkzeug:172.31.196.1 - - [16/Jul/2023 19:11:28] "HEAD / HTTP/1.1" 200 -
+INFO:root:Status code: 200
+INFO:root:Response content: {"status":"success","generationTime":7.532840728759766,"id":28938374,"output":"https:\/\/cdn.stablediffusionapi.com\/generations\/1689534684_out.png"}
+INFO:root:result_url: https://cdn.stablediffusionapi.com/generations/1689534684_out.png
+INFO:root:Received /stable command with prompt: mob boss, dark suit, seated at large desk, shot from ceiling, GTA-V style,
+INFO:root:Successfully saved job ID: 28938996 for user ID: 701381748843610163
+INFO:werkzeug:172.31.196.1 - - [16/Jul/2023 19:16:28] "HEAD / HTTP/1.1" 200 -
+INFO:root:Sending request to upscale API with URL: https://cdn.stablediffusionapi.com/generations/0-a85b76ea-20fd-4c50-bfc8-1e1d3e5c9562.png
+INFO:root:Status code: 200
+INFO:root:Response content: {"status":"success","generationTime":7.497242212295532,"id":28939206,"output":"https:\/\/cdn.stablediffusionapi.com\/generations\/1689534989_out.png"}
+INFO:root:result_url: https://cdn.stablediffusionapi.com/generations/1689534989_out.png
+INFO:root:Sending request to upscale API with URL: https://cdn.stablediffusionapi.com/generations/0-a85b76ea-20fd-4c50-bfc8-1e1d3e5c9562.png
+INFO:root:Status code: 200
+INFO:root:Response content: {"status":"success","generationTime":7.6058385372161865,"id":28939312,"output":"https:\/\/cdn.stablediffusionapi.com\/generations\/1689535022_out.png"}
+INFO:root:result_url: https://cdn.stablediffusionapi.com/generations/1689535022_out.png
+INFO:root:Received /stable command with prompt: a handsome man, working out at the gym, topless, muscular, short hair, gym shorts,
+INFO:root:Successfully saved job ID: 28939910 for user ID: 701381748843610163
+INFO:root:Sending request to upscale API with URL: https://cdn.stablediffusionapi.com/generations/ed15e1ad-6dfc-455c-9b3e-0f7a34a3c619-0.png
+INFO:root:Status code: 200
+INFO:root:Response content: {"status":"success","generationTime":10.069104433059692,"id":28939974,"output":"https:\/\/cdn.stablediffusionapi.com\/generations\/1689535260_out.png"}
+INFO:root:result_url: https://cdn.stablediffusionapi.com/generations/1689535260_out.png
+INFO:werkzeug:172.31.196.1 - - [16/Jul/2023 19:21:28] "HEAD / HTTP/1.1" 200 -
+INFO:root:Received /stable command with prompt: Strigoi vampire, (((The Strain))), lurking in the dark alley, sunset
+INFO:root:Successfully saved job ID: 28940589 for user ID: 701381748843610163
+INFO:root:Sending request to upscale API with URL: https://cdn.stablediffusionapi.com/generations/cc8ab3ab-b250-40ca-a627-3b78805ee98b-0.png
+INFO:root:Status code: 200
+INFO:root:Response content: {"status":"success","generationTime":10.9048330783844,"id":28940713,"output":"https:\/\/cdn.stablediffusionapi.com\/generations\/1689535528_out.png"}
+INFO:root:result_url: https://cdn.stablediffusionapi.com/generations/1689535528_out.png
+INFO:werkzeug:172.31.196.1 - - [16/Jul/2023 19:26:28] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [16/Jul/2023 19:31:28] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [16/Jul/2023 19:36:28] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [16/Jul/2023 19:41:28] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [16/Jul/2023 19:46:28] "HEAD / HTTP/1.1" 200 -
+INFO:nextcord.client:Got a request to RESUME the websocket.
+INFO:nextcord.gateway:Shard ID None has sent the RESUME payload.
+INFO:nextcord.gateway:Shard ID None has successfully RESUMED session 3062883958f71e55b6e2caa6f625bea5 under trace ["gateway-prd-us-east1-b-6r1q",{"micros":765,"calls":["id_created",{"micros":0,"calls":[]},"session_lookup_time",{"micros":370,"calls":[]},"session_lookup_finished",{"micros":15,"calls":[]},"discord-sessions-prd-2-64",{"micros":30}]}].
+INFO:werkzeug:172.31.196.1 - - [16/Jul/2023 19:51:28] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [16/Jul/2023 19:54:27] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [16/Jul/2023 19:55:24] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [16/Jul/2023 19:56:28] "HEAD / HTTP/1.1" 200 -

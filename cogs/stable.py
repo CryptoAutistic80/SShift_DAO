@@ -23,7 +23,7 @@ from src.discord_ui import (
 #                   MAIN FUNCTIONS
 #------------------------------------------------------------------------
 
-class Sdxl(commands.Cog):
+class Stable(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
         self.api_key = os.getenv('STABLEDIFFUSION_API_KEY')
@@ -59,7 +59,14 @@ class Sdxl(commands.Cog):
 #-------------------------------------------------------------------------------
   
     @nextcord.slash_command(description="Use StableDiffusion API")
-    async def sdxl(self, interaction: nextcord.Interaction, 
+    async def stable(self, interaction: nextcord.Interaction, 
+                  model: str = SlashOption(
+                      choices={ 
+                          "SDXL 0.9": "sdxl", 
+                          "Anime": "anything-v5",
+                          "GTA-V": "gta5-artwork-diffusi",
+                          "Realistic Vision": "realistic-vision-v13"},
+                      description="Choose the model for the image generation"),
                   prompt: str = SlashOption(description="Enter a prompt for the image"),
                   resolution: str = SlashOption(
                       choices={ 
@@ -67,15 +74,16 @@ class Sdxl(commands.Cog):
                           "1024x1024 (square)": "1024x1024",
                           "768x1024 (portrait)": "768x1024"},
                       description="Choose the resolution for the image"),
+                  enhance_prompt: bool = SlashOption(description="Choose whether to enhance the prompt or not"),
                   negative_prompt: str = SlashOption(description="Enter a negative prompt for the image", required=False)
                   ):
         try:
             await interaction.response.defer()
-            logging.info(f'Received /sdxl command with prompt: {prompt}')
+            logging.info(f'Received /stable command with prompt: {prompt}')
     
             width, height = resolution.split('x')
     
-            response_json = await post_stablediffusion(self.api_key, prompt, negative_prompt, width, height)
+            response_json = await post_stablediffusion(self.api_key, model, prompt, negative_prompt, width, height, enhance_prompt)
             job_id = response_json['id'] if 'id' in response_json else None
             if job_id:
                 user_id = interaction.user.id
@@ -99,4 +107,4 @@ class Sdxl(commands.Cog):
             return
 
 def setup(bot):
-    bot.add_cog(Sdxl(bot))
+    bot.add_cog(Stable(bot))

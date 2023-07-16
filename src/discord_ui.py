@@ -6,7 +6,7 @@ from urllib.parse import quote
 import logging
 
 #-------------------------------------------------------------
-#                      UI CLASSES
+#                    DISCORD UI CLASSES
 #-------------------------------------------------------------
 
 
@@ -26,7 +26,7 @@ class UpscaleButton(nextcord.ui.Button):
         payload = json.dumps({
             "key": os.getenv('STABLEDIFFUSION_API_KEY'),
             "url": self.image_url,
-            "scale": 4,
+            "scale": 2,
             "webhook": None,
             "face_enhance": False,
         })
@@ -92,7 +92,7 @@ class UpscaleView(nextcord.ui.View):
 # Custom button class for tweeting the image
 class TweetButton(nextcord.ui.Button):
     def __init__(self, image_url):
-        tweet_text = f"I made this with with #SDXL stable diffusion at #SShiftDAO @SShift_NFT, own one #MoveBot #NFT to access our #AiArt #StableDiffusion art machine! {image_url}"
+        tweet_text = f"I made this with with #StableDiffusion at #SShiftDAO @SShift_NFT, own one #MoveBot #NFT to access our #AiArt #GenerativeArt machine! {image_url}"
         tweet_text_encoded = quote(tweet_text)
         tweet_url = f"https://twitter.com/intent/tweet?text={tweet_text_encoded}"
         super().__init__(label="Tweet", style=nextcord.ButtonStyle.secondary, url=tweet_url)

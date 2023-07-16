@@ -49,6 +49,6 @@ class Text2Vid(commands.Cog):
         except Exception as e:
             logging.error(f'Unexpected error: {e}')
 
-def setup(bot):
-    bot.add_cog(Text2Vid(bot))
+##def setup(bot):
+    ##bot.add_cog(Text2Vid(bot))
 
