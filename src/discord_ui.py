@@ -28,7 +28,7 @@ class UpscaleButton(nextcord.ui.Button):
             "url": self.image_url,
             "scale": 2,
             "webhook": None,
-            "face_enhance": False,
+            "face_enhance": True,
         })
         headers = {'Content-Type': 'application/json'}
         
