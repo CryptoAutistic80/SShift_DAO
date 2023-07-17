@@ -35,7 +35,7 @@ async def post_stablediffusion(api_key, model, prompt, negative_prompt, width, h
         "panorama": "no",
         "self_attention": "yes",
         "scheduler": "DPMSolverMultistepScheduler",
-        "webhook": None,
+        "webhook": "https://leonardo.cryptoautistic8.repl.co/webhook",
         "track_id": None
     })
     headers = {

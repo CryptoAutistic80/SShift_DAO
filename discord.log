@@ -9,16 +9,17 @@ INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a
  * Running on http://172.31.196.254:8080
 INFO:werkzeug:[33mPress CTRL+C to quit[0m
 INFO:nextcord.gateway:Shard ID None has sent the IDENTIFY payload.
-INFO:werkzeug:172.31.196.1 - - [17/Jul/2023 14:55:31] "[33mOPTIONS * HTTP/1.1[0m" 404 -
-INFO:nextcord.gateway:Shard ID None has connected to Gateway: ["gateway-prd-us-east1-c-6vkv",{"micros":122637,"calls":["id_created",{"micros":1308,"calls":[]},"session_lookup_time",{"micros":4141,"calls":[]},"session_lookup_finished",{"micros":17,"calls":[]},"discord-sessions-prd-2-92",{"micros":115339,"calls":["start_session",{"micros":67362,"calls":["discord-api-5957c88d5b-pl54b",{"micros":63725,"calls":["get_user",{"micros":22190},"get_guilds",{"micros":5906},"send_scheduled_deletion_message",{"micros":8},"guild_join_requests",{"micros":224},"authorized_ip_coro",{"micros":8}]}]},"starting_guild_connect",{"micros":69,"calls":[]},"presence_started",{"micros":337,"calls":[]},"guilds_started",{"micros":81,"calls":[]},"guilds_connect",{"micros":2,"calls":[]},"presence_connect",{"micros":47405,"calls":[]},"connect_finished",{"micros":47409,"calls":[]},"build_ready",{"micros":51,"calls":[]},"clean_ready",{"micros":1,"calls":[]},"optimize_ready",{"micros":26,"calls":[]},"split_ready",{"micros":1,"calls":[]}]}]}] (Session ID: 790e273768c1cac3d8bc611740359753). Resume URL specified as wss://gateway-us-east1-c.discord.gg
-INFO:werkzeug:172.31.196.1 - - [17/Jul/2023 14:55:31] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [17/Jul/2023 14:55:32] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [17/Jul/2023 15:51:21] "[33mOPTIONS * HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.31.196.1 - - [17/Jul/2023 15:51:21] "GET / HTTP/1.1" 200 -
+INFO:nextcord.gateway:Shard ID None has connected to Gateway: ["gateway-prd-us-east1-b-cqx9",{"micros":234496,"calls":["id_created",{"micros":2925,"calls":[]},"session_lookup_time",{"micros":461,"calls":[]},"session_lookup_finished",{"micros":22,"calls":[]},"discord-sessions-prd-2-151",{"micros":229817,"calls":["start_session",{"micros":152808,"calls":["discord-api-5957c88d5b-kr9h9",{"micros":146210,"calls":["get_user",{"micros":17110},"get_guilds",{"micros":12559},"send_scheduled_deletion_message",{"micros":9},"guild_join_requests",{"micros":1893},"authorized_ip_coro",{"micros":9}]}]},"starting_guild_connect",{"micros":58,"calls":[]},"presence_started",{"micros":18521,"calls":[]},"guilds_started",{"micros":81,"calls":[]},"guilds_connect",{"micros":1,"calls":[]},"presence_connect",{"micros":58302,"calls":[]},"connect_finished",{"micros":58308,"calls":[]},"build_ready",{"micros":19,"calls":[]},"clean_ready",{"micros":0,"calls":[]},"optimize_ready",{"micros":20,"calls":[]},"split_ready",{"micros":1,"calls":[]}]}]}] (Session ID: 8281895eae687a3744b6eb307a359f73). Resume URL specified as wss://gateway-us-east1-b.discord.gg
+INFO:werkzeug:172.31.196.1 - - [17/Jul/2023 15:51:22] "GET / HTTP/1.1" 200 -
 INFO:root:Bot has connected to Discord!
-INFO:werkzeug:172.31.196.1 - - [17/Jul/2023 14:56:28] "HEAD / HTTP/1.1" 200 -
-INFO:root:Received /stable command with prompt: old wrinkled woman, heavy overcoat, head scarf, stands with an empty bowl in her hands, dystopian portrait of a downtrodden citizen, forgotten, isolated, rubbish in street, graffiti on wall
-INFO:root:Sending request to upscale API with URL: https://cdn.stablediffusionapi.com/generations/3a1efb8f-07ad-4384-a350-551f66675fc9-0.png
+INFO:werkzeug:172.31.196.1 - - [17/Jul/2023 15:51:28] "HEAD / HTTP/1.1" 200 -
+INFO:root:Received /stable command with prompt: GTA-V style, hard man. Gang boss with  gun in hand, cigar in mouth, sunglasses
+INFO:werkzeug:172.31.196.1 - - [17/Jul/2023 15:54:59] "[35m[1mPOST /webhook HTTP/1.1[0m" 204 -
+INFO:root:Sending request to upscale API with URL: https://cdn.stablediffusionapi.com/generations/ba09ed71-b544-47c5-9e96-c3c19fe7ce67-0.png
+INFO:werkzeug:172.31.196.1 - - [17/Jul/2023 15:55:36] "[35m[1mPOST /webhook HTTP/1.1[0m" 204 -
 INFO:root:Status code: 200
-INFO:root:Response content: {"status":"success","generationTime":7.607112169265747,"id":29133036,"output":"https:\/\/cdn.stablediffusionapi.com\/generations\/1689605835_out.png"}
-INFO:root:result_url: https://cdn.stablediffusionapi.com/generations/1689605835_out.png
-INFO:werkzeug:172.31.196.1 - - [17/Jul/2023 15:01:28] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [17/Jul/2023 15:06:28] "HEAD / HTTP/1.1" 200 -
+INFO:root:Response content: {"status":"success","generationTime":7.941512107849121,"id":29142778,"output":"https:\/\/cdn.stablediffusionapi.com\/generations\/1689609327_out.png"}
+INFO:root:result_url: https://cdn.stablediffusionapi.com/generations/1689609327_out.png
+INFO:werkzeug:172.31.196.1 - - [17/Jul/2023 15:56:28] "HEAD / HTTP/1.1" 200 -

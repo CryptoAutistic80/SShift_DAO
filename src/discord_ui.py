@@ -27,7 +27,7 @@ class UpscaleButton(nextcord.ui.Button):
             "key": os.getenv('STABLEDIFFUSION_API_KEY'),
             "url": self.image_url,
             "scale": 2,
-            "webhook": None,
+            "webhook": "https://leonardo.cryptoautistic8.repl.co/webhook",
             "face_enhance": True,
         })
         headers = {'Content-Type': 'application/json'}
