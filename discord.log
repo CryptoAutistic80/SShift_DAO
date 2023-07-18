@@ -1,25 +1,18 @@
 WARNING:nextcord.client:PyNaCl is not installed, voice will NOT be supported
 INFO:root:Loading cog: text2vid
-ERROR:root:Failed to load cog: text2vid. Error: Extension 'cogs.text2vid' has no 'setup' function.
 INFO:root:Loading cog: stable
 INFO:nextcord.client:logging in using static token
 INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:8080
- * Running on http://172.31.196.254:8080
+ * Running on http://172.31.196.55:8080
 INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:172.31.196.1 - - [18/Jul/2023 10:55:32] "[33mOPTIONS * HTTP/1.1[0m" 404 -
 INFO:nextcord.gateway:Shard ID None has sent the IDENTIFY payload.
-INFO:werkzeug:172.31.196.1 - - [17/Jul/2023 15:51:21] "[33mOPTIONS * HTTP/1.1[0m" 404 -
-INFO:werkzeug:172.31.196.1 - - [17/Jul/2023 15:51:21] "GET / HTTP/1.1" 200 -
-INFO:nextcord.gateway:Shard ID None has connected to Gateway: ["gateway-prd-us-east1-b-cqx9",{"micros":234496,"calls":["id_created",{"micros":2925,"calls":[]},"session_lookup_time",{"micros":461,"calls":[]},"session_lookup_finished",{"micros":22,"calls":[]},"discord-sessions-prd-2-151",{"micros":229817,"calls":["start_session",{"micros":152808,"calls":["discord-api-5957c88d5b-kr9h9",{"micros":146210,"calls":["get_user",{"micros":17110},"get_guilds",{"micros":12559},"send_scheduled_deletion_message",{"micros":9},"guild_join_requests",{"micros":1893},"authorized_ip_coro",{"micros":9}]}]},"starting_guild_connect",{"micros":58,"calls":[]},"presence_started",{"micros":18521,"calls":[]},"guilds_started",{"micros":81,"calls":[]},"guilds_connect",{"micros":1,"calls":[]},"presence_connect",{"micros":58302,"calls":[]},"connect_finished",{"micros":58308,"calls":[]},"build_ready",{"micros":19,"calls":[]},"clean_ready",{"micros":0,"calls":[]},"optimize_ready",{"micros":20,"calls":[]},"split_ready",{"micros":1,"calls":[]}]}]}] (Session ID: 8281895eae687a3744b6eb307a359f73). Resume URL specified as wss://gateway-us-east1-b.discord.gg
-INFO:werkzeug:172.31.196.1 - - [17/Jul/2023 15:51:22] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [18/Jul/2023 10:55:32] "GET / HTTP/1.1" 200 -
+INFO:nextcord.gateway:Shard ID None has connected to Gateway: ["gateway-prd-us-east1-b-77lr",{"micros":290775,"calls":["id_created",{"micros":1239,"calls":[]},"session_lookup_time",{"micros":346,"calls":[]},"session_lookup_finished",{"micros":15,"calls":[]},"discord-sessions-prd-2-7",{"micros":286751,"calls":["start_session",{"micros":197154,"calls":["discord-api-5867f77bdf-zt9d9",{"micros":189862,"calls":["get_user",{"micros":87593},"get_guilds",{"micros":9860},"send_scheduled_deletion_message",{"micros":11},"guild_join_requests",{"micros":986},"authorized_ip_coro",{"micros":10}]}]},"starting_guild_connect",{"micros":49,"calls":[]},"presence_started",{"micros":45543,"calls":[]},"guilds_started",{"micros":115,"calls":[]},"guilds_connect",{"micros":1,"calls":[]},"presence_connect",{"micros":43830,"calls":[]},"connect_finished",{"micros":43836,"calls":[]},"build_ready",{"micros":24,"calls":[]},"clean_ready",{"micros":1,"calls":[]},"optimize_ready",{"micros":26,"calls":[]},"split_ready",{"micros":1,"calls":[]}]}]}] (Session ID: e68f460276f8841828daa73036b0ff64). Resume URL specified as wss://gateway-us-east1-b.discord.gg
+INFO:werkzeug:172.31.196.1 - - [18/Jul/2023 10:55:33] "GET / HTTP/1.1" 200 -
 INFO:root:Bot has connected to Discord!
-INFO:werkzeug:172.31.196.1 - - [17/Jul/2023 15:51:28] "HEAD / HTTP/1.1" 200 -
-INFO:root:Received /stable command with prompt: GTA-V style, hard man. Gang boss with  gun in hand, cigar in mouth, sunglasses
-INFO:werkzeug:172.31.196.1 - - [17/Jul/2023 15:54:59] "[35m[1mPOST /webhook HTTP/1.1[0m" 204 -
-INFO:root:Sending request to upscale API with URL: https://cdn.stablediffusionapi.com/generations/ba09ed71-b544-47c5-9e96-c3c19fe7ce67-0.png
-INFO:werkzeug:172.31.196.1 - - [17/Jul/2023 15:55:36] "[35m[1mPOST /webhook HTTP/1.1[0m" 204 -
-INFO:root:Status code: 200
-INFO:root:Response content: {"status":"success","generationTime":7.941512107849121,"id":29142778,"output":"https:\/\/cdn.stablediffusionapi.com\/generations\/1689609327_out.png"}
-INFO:root:result_url: https://cdn.stablediffusionapi.com/generations/1689609327_out.png
-INFO:werkzeug:172.31.196.1 - - [17/Jul/2023 15:56:28] "HEAD / HTTP/1.1" 200 -
+INFO:root:Received /stable command with prompt: a future dystopian city, ((lakeside)), thick polluted clouds, sunbeams piercing
+INFO:werkzeug:172.31.196.1 - - [18/Jul/2023 10:56:09] "[35m[1mPOST /webhook HTTP/1.1[0m" 204 -
+INFO:werkzeug:172.31.196.1 - - [18/Jul/2023 10:56:28] "HEAD / HTTP/1.1" 200 -

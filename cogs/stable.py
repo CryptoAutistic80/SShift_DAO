@@ -75,10 +75,11 @@ class Stable(commands.Cog):
             else:
                 await asyncio.sleep(3)
 
-    async def process_task(self, interaction, model, prompt, negative_prompt, width, height, enhance_prompt):
+    async def process_task(self, interaction, model, prompt, negative_prompt, width, height, enhance_prompt, track_id):
         try:
+            ##print(f"Track ID: {track_id}")
             # Make the API call
-            response_json = await post_stablediffusion(self.api_key, model, prompt, negative_prompt, width, height, enhance_prompt)
+            response_json = await post_stablediffusion(self.api_key, model, prompt, negative_prompt, width, height, enhance_prompt, track_id)
         
             # Process the response
             if 'id' in response_json:
@@ -108,6 +109,9 @@ class Stable(commands.Cog):
                           "Disney Pixar": "disney-pixar-cartoon",
                           "Horror": "dreadless-v3",
                           "Anime": "anything-v5",
+                          "Dream Shaper": "dreamshaper-v6",
+                          "Game Character": "zovya",
+                          "Portait Plus (use 'portait+ style')": "portraitplus-diffusion",
                           "GTA-V": "gta5-artwork-diffusi",
                           "Realistic Vision": "realistic-vision-v13"},
                       description="Choose the model for the image generation"),
@@ -124,7 +128,9 @@ class Stable(commands.Cog):
         await interaction.response.defer()
         logging.info(f'Received /stable command with prompt: {prompt}')
         width, height = resolution.split('x')
-        task = self.process_task(interaction, model, prompt, negative_prompt, width, height, enhance_prompt)
+        user_id = str(interaction.user.id)
+        print(f"User ID: {user_id}")  # Add this line
+        task = self.process_task(interaction, model, prompt, negative_prompt, width, height, enhance_prompt, user_id)
         await self.task_queue.put(task)
 
 def setup(bot):

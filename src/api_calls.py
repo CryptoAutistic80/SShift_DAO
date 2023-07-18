@@ -15,7 +15,7 @@ async def fetch_stablediffusion(api_key, job_id):
             response_content = await response.text()
     return json.loads(response_content)
 
-async def post_stablediffusion(api_key, model, prompt, negative_prompt, width, height, enhance_prompt):
+async def post_stablediffusion(api_key, model, prompt, negative_prompt, width, height, enhance_prompt, track_id):
     url = "https://stablediffusionapi.com/api/v4/dreambooth"
     payload = json.dumps({
         "key": api_key,
@@ -36,8 +36,9 @@ async def post_stablediffusion(api_key, model, prompt, negative_prompt, width, h
         "self_attention": "yes",
         "scheduler": "DPMSolverMultistepScheduler",
         "webhook": "https://leonardo.cryptoautistic8.repl.co/webhook",
-        "track_id": None
+        "track_id": track_id
     })
+    ##print(f"Payload: {payload}")
     headers = {
         'Content-Type': 'application/json'
     }
