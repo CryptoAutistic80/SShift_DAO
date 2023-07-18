@@ -106,10 +106,12 @@ class Stable(commands.Cog):
                       choices={ 
                           "Stable 1.5": "sd-1.5",
                           "SDXL 0.9": "sdxl",
+                          "Midjourney V4 (use 'mdjrny-v4 style)": "midjourney",
                           "Disney Pixar": "disney-pixar-cartoon",
                           "Horror": "dreadless-v3",
                           "Anime": "anything-v5",
                           "Dream Shaper": "dreamshaper-v6",
+                          "Protogen": "protogen-x53",
                           "Game Character": "zovya",
                           "Portait Plus (use 'portait+ style')": "portraitplus-diffusion",
                           "GTA-V": "gta5-artwork-diffusi",
@@ -135,4 +137,3 @@ class Stable(commands.Cog):
 
 def setup(bot):
     bot.add_cog(Stable(bot))
-

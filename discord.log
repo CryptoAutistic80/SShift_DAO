@@ -7,12 +7,21 @@ INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a
  * Running on http://127.0.0.1:8080
  * Running on http://172.31.196.55:8080
 INFO:werkzeug:[33mPress CTRL+C to quit[0m
-INFO:werkzeug:172.31.196.1 - - [18/Jul/2023 10:55:32] "[33mOPTIONS * HTTP/1.1[0m" 404 -
 INFO:nextcord.gateway:Shard ID None has sent the IDENTIFY payload.
-INFO:werkzeug:172.31.196.1 - - [18/Jul/2023 10:55:32] "GET / HTTP/1.1" 200 -
-INFO:nextcord.gateway:Shard ID None has connected to Gateway: ["gateway-prd-us-east1-b-77lr",{"micros":290775,"calls":["id_created",{"micros":1239,"calls":[]},"session_lookup_time",{"micros":346,"calls":[]},"session_lookup_finished",{"micros":15,"calls":[]},"discord-sessions-prd-2-7",{"micros":286751,"calls":["start_session",{"micros":197154,"calls":["discord-api-5867f77bdf-zt9d9",{"micros":189862,"calls":["get_user",{"micros":87593},"get_guilds",{"micros":9860},"send_scheduled_deletion_message",{"micros":11},"guild_join_requests",{"micros":986},"authorized_ip_coro",{"micros":10}]}]},"starting_guild_connect",{"micros":49,"calls":[]},"presence_started",{"micros":45543,"calls":[]},"guilds_started",{"micros":115,"calls":[]},"guilds_connect",{"micros":1,"calls":[]},"presence_connect",{"micros":43830,"calls":[]},"connect_finished",{"micros":43836,"calls":[]},"build_ready",{"micros":24,"calls":[]},"clean_ready",{"micros":1,"calls":[]},"optimize_ready",{"micros":26,"calls":[]},"split_ready",{"micros":1,"calls":[]}]}]}] (Session ID: e68f460276f8841828daa73036b0ff64). Resume URL specified as wss://gateway-us-east1-b.discord.gg
-INFO:werkzeug:172.31.196.1 - - [18/Jul/2023 10:55:33] "GET / HTTP/1.1" 200 -
+INFO:nextcord.gateway:Shard ID None has connected to Gateway: ["gateway-prd-us-east1-c-tv6v",{"micros":113810,"calls":["id_created",{"micros":1062,"calls":[]},"session_lookup_time",{"micros":411,"calls":[]},"session_lookup_finished",{"micros":19,"calls":[]},"discord-sessions-prd-2-287",{"micros":109130,"calls":["start_session",{"micros":83849,"calls":["discord-api-5867f77bdf-hfcqn",{"micros":74032,"calls":["get_user",{"micros":24039},"get_guilds",{"micros":9018},"send_scheduled_deletion_message",{"micros":11},"guild_join_requests",{"micros":2},"authorized_ip_coro",{"micros":13}]}]},"starting_guild_connect",{"micros":56,"calls":[]},"presence_started",{"micros":307,"calls":[]},"guilds_started",{"micros":95,"calls":[]},"guilds_connect",{"micros":2,"calls":[]},"presence_connect",{"micros":24776,"calls":[]},"connect_finished",{"micros":24781,"calls":[]},"build_ready",{"micros":20,"calls":[]},"clean_ready",{"micros":0,"calls":[]},"optimize_ready",{"micros":19,"calls":[]},"split_ready",{"micros":1,"calls":[]}]}]}] (Session ID: 65e7452aba60f9eb174684b2a03737b3). Resume URL specified as wss://gateway-us-east1-c.discord.gg
+INFO:nextcord.state:nextcord.ConnectionState: Registering command with signature ('stable', 1, None)
+INFO:werkzeug:172.31.196.1 - - [18/Jul/2023 13:33:24] "[33mOPTIONS * HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.31.196.1 - - [18/Jul/2023 13:33:24] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [18/Jul/2023 13:33:24] "[33mOPTIONS * HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.31.196.1 - - [18/Jul/2023 13:33:24] "GET / HTTP/1.1" 200 -
 INFO:root:Bot has connected to Discord!
-INFO:root:Received /stable command with prompt: a future dystopian city, ((lakeside)), thick polluted clouds, sunbeams piercing
-INFO:werkzeug:172.31.196.1 - - [18/Jul/2023 10:56:09] "[35m[1mPOST /webhook HTTP/1.1[0m" 204 -
-INFO:werkzeug:172.31.196.1 - - [18/Jul/2023 10:56:28] "HEAD / HTTP/1.1" 200 -
+INFO:root:Received /stable command with prompt: a dark elf, mage robes, casting violent magic, dystopian city streets, dirt, grime, fire,
+INFO:werkzeug:172.31.196.1 - - [18/Jul/2023 13:34:15] "[35m[1mPOST /webhook HTTP/1.1[0m" 204 -
+INFO:root:Received /stable command with prompt: portait+ style, a portait of boris johnson, leader of the NoBS party, framed portrait, (((looks like Boris Johnson))),
+INFO:werkzeug:172.31.196.1 - - [18/Jul/2023 13:36:28] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [18/Jul/2023 13:36:32] "[35m[1mPOST /webhook HTTP/1.1[0m" 204 -
+INFO:root:Sending request to upscale API with URL: https://cdn.stablediffusionapi.com/generations/0-a7d9a5fa-0c48-452b-a77e-a6afbcc5338b.png
+INFO:werkzeug:172.31.196.1 - - [18/Jul/2023 13:37:08] "[35m[1mPOST /webhook HTTP/1.1[0m" 204 -
+INFO:root:Status code: 200
+INFO:root:Response content: {"status":"success","generationTime":7.572388172149658,"id":29362807,"output":"https:\/\/cdn.stablediffusionapi.com\/generations\/1689687419_out.png"}
+INFO:root:result_url: https://cdn.stablediffusionapi.com/generations/1689687419_out.png
