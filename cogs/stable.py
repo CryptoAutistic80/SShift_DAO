@@ -53,10 +53,10 @@ class Stable(commands.Cog):
         self.job_ids = {}  #to store user IDs and their prompts
         self.prompts = {}
         self.negative_prompts = {}  # Dictionary to store user IDs and their negative prompts
+        self.model_ids = {}  # Dictionary to store user IDs and their model IDs
         self.image_urls = {}  # Dictionary to store user IDs and their image URLs
         self.task_queue = TaskQueue(5)  # 5 workers for 5 tasks per second
 
-    # Function to process the fetch response and send the results to the user
     async def process_fetch_response(self, interaction, user_id):
         job_id = self.job_ids[user_id]
         while True:
@@ -64,14 +64,15 @@ class Stable(commands.Cog):
             if response_json['status'] == 'success':
                 image_url = response_json['output'][0]  # We expect only one image now
                 view = ImageView(image_url)  # Create an ImageView with the image URL
-
+    
                 embed = nextcord.Embed(  # Create an embed
-                    title="Generated using:",
-                    description=f"Prompt: {self.prompts[user_id]}, Negative prompt: {self.negative_prompts[user_id]}",
+                    title="Generation Details:",
+                    description=f"MODEL: {self.model_ids[user_id]}\n\nPROMPT: {self.prompts[user_id]}\n\nNEGATIVE: {self.negative_prompts[user_id]}",
                     color=nextcord.Color.blurple()
                 )
-                embed.set_image(url=image_url)  # Set the image URL in the embed
 
+                embed.set_image(url=image_url)  # Set the image URL in the embed
+    
                 await interaction.followup.send(embed=embed, view=view)  # Send the embed along with the view
                 break
             else:
@@ -88,6 +89,7 @@ class Stable(commands.Cog):
                 self.job_ids[user_id] = job_id
                 self.prompts[user_id] = prompt
                 self.negative_prompts[user_id] = negative_prompt
+                self.model_ids[user_id] = model  # Store the model ID
                 generation_time = response_json.get('generationTime', 0)
                 estimated_time = f"{generation_time:.2f}"  # Convert generation_time to a formatted string with 2 decimal places
                 view = FetchResultsView(self, user_id, interaction)
@@ -108,13 +110,13 @@ class Stable(commands.Cog):
                           "SDXL 1.0": "sdxl",
                           "Midjourney V4 (use 'mdjrny-v4 style)": "midjourney",
                           "Toon You": "toonyou",
-                          "Horror": "dreadless-v3",
-                          "Anime": "anything-v5",
+                          "Horror (dreadless)": "dreadless-v3",
+                          "Anime (anything v5)": "anything-v5",
                           "Anime Bigger": "anime-babes-bigger",
                           "Dream Shaper": "dreamshaper-v6",
                           "Protogen": "protogen-x53",
                           "Ink Punk": "inkpunk",
-                          "Game Character": "zovya",
+                          "Game Character (zovya)": "zovya",
                           "Portait Plus (use 'portait+ style)": "portraitplus-diffusion",
                           "GTA-V": "gta5-artwork-diffusi",
                           "Realistic Vision": "realistic-vision-v13"},
@@ -142,12 +144,12 @@ class Stable(commands.Cog):
                   model: str = SlashOption(
                       choices={ 
                           "SDXL 1.0": "sdxl",
-                          "Realistic Porn": "uber-realistic-merge",
-                          "Realistic Porn 2": "urpm-eevee",
+                          "Realistic Porn (urpm)": "uber-realistic-merge",
+                          "Realistic Porn 2 (urpm)": "urpm-eevee",
                           "Dark AppFactory": "dark-appfactory",
                           "Grapefruit NSFW Anime": " grapefruit-nsfw-anim",
                           "Hentai": "sakushimix-hentai",
-                          "Anime": "anything-v5"},
+                          "Anime (anything v5)": "anything-v5"},
                       description="Choose the model for the image generation"),
                   prompt: str = SlashOption(description="Enter a prompt for the image"),
                   resolution: str = SlashOption(
