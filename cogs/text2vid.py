@@ -4,6 +4,7 @@ import os
 import json
 import nextcord
 from nextcord.ext import commands
+from config import STABLE_GUILD_ID
 
 # Set up logging
 logging.basicConfig(level=logging.INFO)
@@ -30,7 +31,7 @@ class Text2Vid(commands.Cog):
                 response_content = await response.text()
         return json.loads(response_content)
 
-    @nextcord.slash_command(description="Use StableDiffusion API to generate a video")
+    @nextcord.slash_command(description="Use StableDiffusion API to generate a video", guild_ids=[STABLE_GUILD_ID])
     async def text2vid(self, interaction: nextcord.Interaction, 
                        prompt: str = nextcord.SlashOption(description="Enter a prompt for the video"),
                        seconds: int = nextcord.SlashOption(description="Duration of the video in seconds"),

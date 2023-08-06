@@ -9,6 +9,8 @@ from nextcord.ext import commands
 import asyncio
 import logging
 
+from config import STABLE_GUILD_ID
+
 from src.api_calls import fetch_stablediffusion, post_stablediffusion
 from src.discord_ui import ( 
     UpscaleButton,  
@@ -75,16 +77,14 @@ class Stable(commands.Cog):
             else:
                 await asyncio.sleep(3)
 
-    async def process_task(self, interaction, model, prompt, negative_prompt, width, height, enhance_prompt, track_id):
+    async def process_task(self, interaction, model, prompt, negative_prompt, width, height, enhance_prompt, user_id, safety_checker):
         try:
-            ##print(f"Track ID: {track_id}")
             # Make the API call
-            response_json = await post_stablediffusion(self.api_key, model, prompt, negative_prompt, width, height, enhance_prompt, track_id)
-        
+            response_json = await post_stablediffusion(self.api_key, model, prompt, negative_prompt, width, height, enhance_prompt, user_id, safety_checker)
+            
             # Process the response
             if 'id' in response_json:
                 job_id = response_json['id']
-                user_id = str(interaction.user.id)
                 self.job_ids[user_id] = job_id
                 self.prompts[user_id] = prompt
                 self.negative_prompts[user_id] = negative_prompt
@@ -100,20 +100,22 @@ class Stable(commands.Cog):
             logging.error('NotFound exception encountered')
             return
 
-    @nextcord.slash_command(description="Use StableDiffusion API")
+    @nextcord.slash_command(description="Use StableDiffusion API", guild_ids=[STABLE_GUILD_ID])
     async def stable(self, interaction: nextcord.Interaction, 
                   model: str = SlashOption(
                       choices={ 
                           "Stable 1.5": "sd-1.5",
-                          "SDXL 0.9": "sdxl",
+                          "SDXL 1.0": "sdxl",
                           "Midjourney V4 (use 'mdjrny-v4 style)": "midjourney",
-                          "Disney Pixar": "disney-pixar-cartoon",
+                          "Toon You": "toonyou",
                           "Horror": "dreadless-v3",
                           "Anime": "anything-v5",
+                          "Anime Bigger": "anime-babes-bigger",
                           "Dream Shaper": "dreamshaper-v6",
                           "Protogen": "protogen-x53",
+                          "Ink Punk": "inkpunk",
                           "Game Character": "zovya",
-                          "Portait Plus (use 'portait+ style')": "portraitplus-diffusion",
+                          "Portait Plus (use 'portait+ style)": "portraitplus-diffusion",
                           "GTA-V": "gta5-artwork-diffusi",
                           "Realistic Vision": "realistic-vision-v13"},
                       description="Choose the model for the image generation"),
@@ -131,8 +133,42 @@ class Stable(commands.Cog):
         logging.info(f'Received /stable command with prompt: {prompt}')
         width, height = resolution.split('x')
         user_id = str(interaction.user.id)
-        print(f"User ID: {user_id}")  # Add this line
-        task = self.process_task(interaction, model, prompt, negative_prompt, width, height, enhance_prompt, user_id)
+        print(f"User ID: {user_id}")
+        task = self.process_task(interaction, model, prompt, negative_prompt, width, height, enhance_prompt, user_id, "yes")
+        await self.task_queue.put(task)
+      
+    @nextcord.slash_command(description="NSFW art - NSFW CHANNEL ONLY", guild_ids=[STABLE_GUILD_ID])
+    async def nsfw(self, interaction: nextcord.Interaction, 
+                  model: str = SlashOption(
+                      choices={ 
+                          "SDXL 1.0": "sdxl",
+                          "Realistic Porn": "uber-realistic-merge",
+                          "Realistic Porn 2": "urpm-eevee",
+                          "Dark AppFactory": "dark-appfactory",
+                          "Grapefruit NSFW Anime": " grapefruit-nsfw-anim",
+                          "Hentai": "sakushimix-hentai",
+                          "Anime": "anything-v5"},
+                      description="Choose the model for the image generation"),
+                  prompt: str = SlashOption(description="Enter a prompt for the image"),
+                  resolution: str = SlashOption(
+                      choices={ 
+                          "1024x768 (landscape)": "1024x768", 
+                          "1024x1024 (square)": "1024x1024",
+                          "768x1024 (portrait)": "768x1024"},
+                      description="Choose the resolution for the image"),
+                  enhance_prompt: bool = SlashOption(description="Choose whether to enhance the prompt or not"),
+                  negative_prompt: str = SlashOption(description="Enter a negative prompt for the image", required=False)
+                  ):
+        if interaction.channel.id != 1135264855700553851:
+            await interaction.response.send_message("This command can only be used in a specific channel.", ephemeral=True)
+            return
+    
+        await interaction.response.defer()
+        logging.info(f'Received /nsfw command with prompt: {prompt}')
+        width, height = resolution.split('x')
+        user_id = str(interaction.user.id)
+        print(f"User ID: {user_id}")
+        task = self.process_task(interaction, model, prompt, negative_prompt, width, height, enhance_prompt, user_id, "no")
         await self.task_queue.put(task)
 
 def setup(bot):

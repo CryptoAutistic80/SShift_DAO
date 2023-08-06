@@ -92,7 +92,7 @@ class UpscaleView(nextcord.ui.View):
 # Custom button class for tweeting the image
 class TweetButton(nextcord.ui.Button):
     def __init__(self, image_url):
-        tweet_text = f"I made this with with #StableDiffusion at #SShiftDAO @SShift_NFT, own one #MoveBot #NFT to access our #AiArt #GenerativeArt machine! {image_url}"
+        tweet_text = f"I made this with #StableDiffusion at #SShiftDAO @SShift_NFT, own one #MoveBot #NFT to access our #AiArt #GenerativeArt machine! #AptosNFT #APTOS #TwitterX #TwitterBirdLeaving {image_url}"
         tweet_text_encoded = quote(tweet_text)
         tweet_url = f"https://twitter.com/intent/tweet?text={tweet_text_encoded}"
         super().__init__(label="Tweet", style=nextcord.ButtonStyle.secondary, url=tweet_url)
