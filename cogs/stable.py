@@ -90,10 +90,8 @@ class Stable(commands.Cog):
                 self.prompts[user_id] = prompt
                 self.negative_prompts[user_id] = negative_prompt
                 self.model_ids[user_id] = model  # Store the model ID
-                generation_time = response_json.get('generationTime', 0)
-                estimated_time = f"{generation_time:.2f}"  # Convert generation_time to a formatted string with 2 decimal places
                 view = FetchResultsView(self, user_id, interaction)
-                await interaction.followup.send(f'Your request has been processed. Your job ID is {job_id}. Estimated generation time: {estimated_time} seconds. You may manually fetch your results by clicking the "Fetch Results" button.', view=view)
+                await interaction.followup.send(f'Your request has been processed. Your job ID is {job_id}. Wait approx 10 secs and you may manually fetch your results by clicking the "Fetch Results" button (only click once).', view=view)
             else:
                 logging.error('Failed to retrieve job ID')
                 logging.error(f'API response: {response_json}')
