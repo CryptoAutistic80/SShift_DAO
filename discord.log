@@ -6,56 +6,99 @@ INFO:nextcord.client:logging in using static token
 INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:8080
- * Running on http://172.31.196.31:8080
+ * Running on http://172.31.196.16:8080
 INFO:werkzeug:[33mPress CTRL+C to quit[0m
-WARNING:asyncio:Executing <Task pending name='Task-1' coro=<main() running at main.py:41> wait_for=<Future pending cb=[shield.<locals>._outer_done_callback() at /nix/store/hd4cc9rh83j291r5539hkf6qd8lgiikb-python3-3.10.8/lib/python3.10/asyncio/tasks.py:864, Task.task_wakeup()] created at /nix/store/hd4cc9rh83j291r5539hkf6qd8lgiikb-python3-3.10.8/lib/python3.10/asyncio/base_events.py:429> cb=[_run_until_complete_cb() at /nix/store/hd4cc9rh83j291r5539hkf6qd8lgiikb-python3-3.10.8/lib/python3.10/asyncio/base_events.py:184] created at /nix/store/hd4cc9rh83j291r5539hkf6qd8lgiikb-python3-3.10.8/lib/python3.10/asyncio/tasks.py:636> took 0.465 seconds
-INFO:werkzeug:172.31.196.1 - - [08/Aug/2023 18:57:33] "[33mOPTIONS * HTTP/1.1[0m" 404 -
-INFO:werkzeug:172.31.196.1 - - [08/Aug/2023 18:57:33] "HEAD / HTTP/1.1" 200 -
+WARNING:asyncio:Executing <Task pending name='Task-1' coro=<main() running at main.py:41> wait_for=<Future pending cb=[shield.<locals>._outer_done_callback() at /nix/store/hd4cc9rh83j291r5539hkf6qd8lgiikb-python3-3.10.8/lib/python3.10/asyncio/tasks.py:864, Task.task_wakeup()] created at /nix/store/hd4cc9rh83j291r5539hkf6qd8lgiikb-python3-3.10.8/lib/python3.10/asyncio/base_events.py:429> cb=[_run_until_complete_cb() at /nix/store/hd4cc9rh83j291r5539hkf6qd8lgiikb-python3-3.10.8/lib/python3.10/asyncio/base_events.py:184] created at /nix/store/hd4cc9rh83j291r5539hkf6qd8lgiikb-python3-3.10.8/lib/python3.10/asyncio/tasks.py:636> took 0.330 seconds
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 03:04:24] "[33mOPTIONS * HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 03:04:24] "HEAD / HTTP/1.1" 200 -
 INFO:nextcord.gateway:Shard ID None has sent the IDENTIFY payload.
-INFO:nextcord.gateway:Shard ID None has connected to Gateway: ["gateway-prd-us-east1-d-xmj3",{"micros":100396,"calls":["id_created",{"micros":1798,"calls":[]},"session_lookup_time",{"micros":5116,"calls":[]},"session_lookup_finished",{"micros":17,"calls":[]},"discord-sessions-prd-2-207",{"micros":92411,"calls":["start_session",{"micros":78782,"calls":["discord-api-5f58867885-fnsmv",{"micros":65741,"calls":["get_user",{"micros":26298},"get_guilds",{"micros":5169},"send_scheduled_deletion_message",{"micros":10},"guild_join_requests",{"micros":184},"authorized_ip_coro",{"micros":12}]}]},"starting_guild_connect",{"micros":77,"calls":[]},"presence_started",{"micros":406,"calls":[]},"guilds_started",{"micros":114,"calls":[]},"guilds_connect",{"micros":1,"calls":[]},"presence_connect",{"micros":12981,"calls":[]},"connect_finished",{"micros":12990,"calls":[]},"build_ready",{"micros":18,"calls":[]},"clean_ready",{"micros":1,"calls":[]},"optimize_ready",{"micros":21,"calls":[]},"split_ready",{"micros":0,"calls":[]}]}]}] (Session ID: 4b4a0b54feaf1a8537942ba46e8b95ff). Resume URL specified as wss://gateway-us-east1-d.discord.gg
+INFO:nextcord.gateway:Shard ID None has connected to Gateway: ["gateway-prd-us-east1-b-spsp",{"micros":99199,"calls":["id_created",{"micros":1130,"calls":[]},"session_lookup_time",{"micros":373,"calls":[]},"session_lookup_finished",{"micros":13,"calls":[]},"discord-sessions-prd-2-247",{"micros":96738,"calls":["start_session",{"micros":75883,"calls":["discord-api-5c99c6cc78-kjm2b",{"micros":70831,"calls":["get_user",{"micros":21999},"get_guilds",{"micros":5944},"send_scheduled_deletion_message",{"micros":13},"guild_join_requests",{"micros":2},"authorized_ip_coro",{"micros":13}]}]},"starting_guild_connect",{"micros":60,"calls":[]},"presence_started",{"micros":272,"calls":[]},"guilds_started",{"micros":85,"calls":[]},"guilds_connect",{"micros":1,"calls":[]},"presence_connect",{"micros":20381,"calls":[]},"connect_finished",{"micros":20387,"calls":[]},"build_ready",{"micros":19,"calls":[]},"clean_ready",{"micros":1,"calls":[]},"optimize_ready",{"micros":28,"calls":[]},"split_ready",{"micros":1,"calls":[]}]}]}] (Session ID: 1c572e5bd8aa6033dc1380703c0796c1). Resume URL specified as wss://gateway-us-east1-b.discord.gg
 INFO:root:Bot has connected to Discord!
-INFO:werkzeug:172.31.196.1 - - [08/Aug/2023 19:02:25] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [08/Aug/2023 19:07:25] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [08/Aug/2023 19:12:25] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 03:09:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 03:14:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 03:19:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 03:24:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 03:29:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 03:34:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 03:39:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 03:44:13] "HEAD / HTTP/1.1" 200 -
+INFO:nextcord.client:Got a request to RESUME the websocket.
+INFO:nextcord.gateway:Shard ID None has sent the RESUME payload.
+INFO:nextcord.gateway:Shard ID None has successfully RESUMED session 1c572e5bd8aa6033dc1380703c0796c1 under trace ["gateway-prd-us-east1-b-f3sj",{"micros":645,"calls":["id_created",{"micros":0,"calls":[]},"session_lookup_time",{"micros":277,"calls":[]},"session_lookup_finished",{"micros":14,"calls":[]},"discord-sessions-prd-2-247",{"micros":23}]}].
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 03:49:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 03:54:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 03:59:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 04:04:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 04:09:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 04:14:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 04:19:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 04:24:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 04:29:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 04:34:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 04:39:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 04:44:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 04:49:13] "HEAD / HTTP/1.1" 200 -
 INFO:nextcord.gateway:Websocket closed with WSCloseCode.ABNORMAL_CLOSURE, attempting a reconnect.
 INFO:nextcord.client:Got a request to RESUME the websocket.
 INFO:nextcord.gateway:Shard ID None has sent the RESUME payload.
-INFO:nextcord.gateway:Shard ID None has successfully RESUMED session 4b4a0b54feaf1a8537942ba46e8b95ff under trace ["gateway-prd-us-east1-d-80h7",{"micros":2200,"calls":["id_created",{"micros":0,"calls":[]},"session_lookup_time",{"micros":1708,"calls":[]},"session_lookup_finished",{"micros":19,"calls":[]},"discord-sessions-prd-2-207",{"micros":51}]}].
-INFO:werkzeug:172.31.196.1 - - [08/Aug/2023 19:17:25] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [08/Aug/2023 19:22:25] "HEAD / HTTP/1.1" 200 -
-INFO:root:Received /stable command with prompt: jungle smith
-INFO:werkzeug:172.31.196.1 - - [08/Aug/2023 19:26:35] "[35m[1mPOST /webhook HTTP/1.1[0m" 204 -
-INFO:werkzeug:172.31.196.1 - - [08/Aug/2023 19:27:25] "HEAD / HTTP/1.1" 200 -
-INFO:root:Received /stable command with prompt: Monkey , pink , background jungle,
-INFO:werkzeug:172.31.196.1 - - [08/Aug/2023 19:29:13] "[35m[1mPOST /webhook HTTP/1.1[0m" 204 -
-INFO:root:Received /stable command with prompt: blue monkey, background jungle
-INFO:werkzeug:172.31.196.1 - - [08/Aug/2023 19:31:02] "[35m[1mPOST /webhook HTTP/1.1[0m" 204 -
-INFO:root:Received /stable command with prompt: baby monkey , backround jungle
-INFO:werkzeug:172.31.196.1 - - [08/Aug/2023 19:32:12] "[35m[1mPOST /webhook HTTP/1.1[0m" 204 -
-INFO:werkzeug:172.31.196.1 - - [08/Aug/2023 19:32:25] "HEAD / HTTP/1.1" 200 -
-INFO:root:Received /nsfw command with prompt: baby monkey, background jungle
-INFO:werkzeug:172.31.196.1 - - [08/Aug/2023 19:33:54] "[35m[1mPOST /webhook HTTP/1.1[0m" 204 -
-INFO:werkzeug:172.31.196.1 - - [08/Aug/2023 19:37:25] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [08/Aug/2023 19:42:25] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [08/Aug/2023 19:47:25] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [08/Aug/2023 19:52:25] "HEAD / HTTP/1.1" 200 -
-INFO:root:Received /stable command with prompt: Furry small standing cute wolf, dressed with a dinosaur suit
-INFO:werkzeug:172.31.196.1 - - [08/Aug/2023 19:56:07] "[35m[1mPOST /webhook HTTP/1.1[0m" 204 -
-INFO:werkzeug:172.31.196.1 - - [08/Aug/2023 19:56:51] "GET / HTTP/1.1" 200 -
-INFO:root:Received /stable command with prompt: Furry small standing cute wolf, dressed with a dinosaur suit
-INFO:werkzeug:172.31.196.1 - - [08/Aug/2023 19:57:05] "[35m[1mPOST /webhook HTTP/1.1[0m" 204 -
-INFO:werkzeug:172.31.196.1 - - [08/Aug/2023 19:57:25] "HEAD / HTTP/1.1" 200 -
-INFO:root:Received /stable command with prompt: Furry small standing cute wolf, dressed with a dinosaur suit, in the style of rocket from gue
-INFO:werkzeug:172.31.196.1 - - [08/Aug/2023 19:57:41] "[35m[1mPOST /webhook HTTP/1.1[0m" 204 -
-INFO:root:Received /stable command with prompt: Furry small standing cute wolf, dressed with a dinosaur suit, in the style of rocket from guardians of the galaxy
-INFO:werkzeug:172.31.196.1 - - [08/Aug/2023 19:57:49] "[35m[1mPOST /webhook HTTP/1.1[0m" 204 -
-INFO:root:Received /stable command with prompt: Furry small standing cute wolf, dressed with a dinosaur suit, in the style of rocket from guardians of the galaxy
-INFO:werkzeug:172.31.196.1 - - [08/Aug/2023 19:58:25] "[35m[1mPOST /webhook HTTP/1.1[0m" 204 -
-INFO:root:Received /stable command with prompt: Furry small standing cute wolf, dressed with a dinosaur suit, in the style of rocket from guardians of the galaxy
-INFO:werkzeug:172.31.196.1 - - [08/Aug/2023 19:59:07] "[35m[1mPOST /webhook HTTP/1.1[0m" 204 -
-INFO:werkzeug:172.31.196.1 - - [08/Aug/2023 20:02:25] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [08/Aug/2023 20:07:25] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [08/Aug/2023 20:12:25] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [08/Aug/2023 20:17:25] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [08/Aug/2023 20:18:44] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [08/Aug/2023 20:18:52] "GET / HTTP/1.1" 200 -
+INFO:nextcord.gateway:Shard ID None has successfully RESUMED session 1c572e5bd8aa6033dc1380703c0796c1 under trace ["gateway-prd-us-east1-b-dx60",{"micros":3538,"calls":["id_created",{"micros":0,"calls":[]},"session_lookup_time",{"micros":3254,"calls":[]},"session_lookup_finished",{"micros":12,"calls":[]},"discord-sessions-prd-2-247",{"micros":28}]}].
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 04:54:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 04:59:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 05:04:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 05:09:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 05:14:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 05:19:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 05:24:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 05:29:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 05:34:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 05:39:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 05:44:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 05:49:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 05:54:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 05:59:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 06:04:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 06:09:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 06:14:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 06:19:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 06:24:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 06:29:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 06:34:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 06:39:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 06:44:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 06:49:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 06:54:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 06:59:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 07:04:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 07:09:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 07:14:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 07:19:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 07:24:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 07:29:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 07:34:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 07:39:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 07:44:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 07:49:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 07:54:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 07:59:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 08:04:13] "HEAD / HTTP/1.1" 200 -
+INFO:nextcord.client:Got a request to RESUME the websocket.
+INFO:nextcord.gateway:Shard ID None has sent the RESUME payload.
+INFO:nextcord.gateway:Shard ID None has successfully RESUMED session 1c572e5bd8aa6033dc1380703c0796c1 under trace ["gateway-prd-us-east1-b-wrzk",{"micros":9991,"calls":["id_created",{"micros":0,"calls":[]},"session_lookup_time",{"micros":6257,"calls":[]},"session_lookup_finished",{"micros":11,"calls":[]},"discord-sessions-prd-2-247",{"micros":33}]}].
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 08:09:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 08:14:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 08:19:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 08:24:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 08:29:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 08:34:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 08:39:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 08:44:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 08:49:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 08:54:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 08:59:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 09:04:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 09:09:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 09:14:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 09:19:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 09:24:13] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 09:26:42] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [10/Aug/2023 09:26:50] "GET / HTTP/1.1" 200 -
