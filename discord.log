@@ -1,108 +1,17 @@
 WARNING:nextcord.client:PyNaCl is not installed, voice will NOT be supported
+INFO:root:Loading cog: reactor
+INFO:root:Loading cog: text2vid
 INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:8080
- * Running on http://172.31.196.42:8080
+ * Running on http://172.31.196.9:8080
 INFO:werkzeug:[33mPress CTRL+C to quit[0m
-INFO:root:Loading cog: reactor
-INFO:root:Loading cog: text2vid
 INFO:root:Loading cog: stable
 INFO:nextcord.client:logging in using static token
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 03:30:15] "[33mOPTIONS * HTTP/1.1[0m" 404 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 03:30:15] "HEAD / HTTP/1.1" 200 -
 INFO:nextcord.gateway:Shard ID None has sent the IDENTIFY payload.
-INFO:nextcord.gateway:Shard ID None has connected to Gateway: ["gateway-prd-us-east1-d-m6g6",{"micros":165202,"calls":["id_created",{"micros":1333,"calls":[]},"session_lookup_time",{"micros":310,"calls":[]},"session_lookup_finished",{"micros":17,"calls":[]},"discord-sessions-prd-2-54",{"micros":163143,"calls":["start_session",{"micros":68562,"calls":["discord-api-9c87f74c5-wzp5d",{"micros":62108,"calls":["get_user",{"micros":22614},"get_guilds",{"micros":3409},"send_scheduled_deletion_message",{"micros":10},"guild_join_requests",{"micros":685},"authorized_ip_coro",{"micros":12}]}]},"starting_guild_connect",{"micros":64,"calls":[]},"presence_started",{"micros":30289,"calls":[]},"guilds_started",{"micros":90,"calls":[]},"guilds_connect",{"micros":1,"calls":[]},"presence_connect",{"micros":64092,"calls":[]},"connect_finished",{"micros":64096,"calls":[]},"build_ready",{"micros":19,"calls":[]},"clean_ready",{"micros":20,"calls":[]},"optimize_ready",{"micros":1,"calls":[]},"split_ready",{"micros":0,"calls":[]}]}]}] (Session ID: 2b60782cb8d9c24adc04d40d965a8cad). Resume URL specified as wss://gateway-us-east1-d.discord.gg
+INFO:nextcord.gateway:Shard ID None has connected to Gateway: ["gateway-prd-us-east1-c-h2h5",{"micros":92179,"calls":["id_created",{"micros":1981,"calls":[]},"session_lookup_time",{"micros":2530,"calls":[]},"session_lookup_finished",{"micros":13,"calls":[]},"discord-sessions-prd-2-269",{"micros":84934,"calls":["start_session",{"micros":59486,"calls":["discord-api-6785cb845d-dqs5c",{"micros":53754,"calls":["get_user",{"micros":17188},"get_guilds",{"micros":7522},"send_scheduled_deletion_message",{"micros":9},"guild_join_requests",{"micros":1},"authorized_ip_coro",{"micros":11}]}]},"starting_guild_connect",{"micros":52,"calls":[]},"presence_started",{"micros":8360,"calls":[]},"guilds_started",{"micros":103,"calls":[]},"guilds_connect",{"micros":1,"calls":[]},"presence_connect",{"micros":16879,"calls":[]},"connect_finished",{"micros":16884,"calls":[]},"build_ready",{"micros":20,"calls":[]},"clean_ready",{"micros":1,"calls":[]},"optimize_ready",{"micros":25,"calls":[]},"split_ready",{"micros":1,"calls":[]}]}]}] (Session ID: 7e300e1647849a35f89476489dbf3662). Resume URL specified as wss://gateway-us-east1-c.discord.gg
+INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 20:23:26] "[33mOPTIONS * HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 20:23:27] "GET / HTTP/1.1" 200 -
 INFO:root:Bot has connected to Discord!
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 03:35:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 03:40:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 03:45:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 03:50:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 03:55:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 04:00:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 04:05:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 04:10:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 04:15:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 04:20:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 04:25:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 04:30:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 04:35:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 04:40:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 04:45:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 04:50:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 04:55:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 05:00:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 05:05:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 05:10:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 05:15:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 05:20:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 05:25:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 05:30:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 05:35:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 05:40:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 05:45:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 05:50:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 05:55:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 06:00:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 06:05:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 06:10:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 06:15:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 06:20:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 06:25:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 06:30:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 06:35:03] "HEAD / HTTP/1.1" 200 -
-INFO:nextcord.client:Got a request to RESUME the websocket.
-INFO:nextcord.gateway:Shard ID None has sent the RESUME payload.
-INFO:nextcord.gateway:Shard ID None has successfully RESUMED session 2b60782cb8d9c24adc04d40d965a8cad under trace ["gateway-prd-us-east1-d-bxbx",{"micros":433,"calls":["id_created",{"micros":0,"calls":[]},"session_lookup_time",{"micros":221,"calls":[]},"session_lookup_finished",{"micros":15,"calls":[]},"discord-sessions-prd-2-54",{"micros":25}]}].
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 06:40:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 06:45:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 06:50:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 06:55:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 07:00:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 07:05:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 07:10:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 07:15:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 07:20:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 07:25:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 07:30:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 07:35:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 07:40:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 07:45:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 07:50:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 07:55:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 08:00:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 08:05:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 08:10:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 08:15:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 08:20:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 08:25:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 08:30:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 08:35:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 08:40:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 08:45:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 08:50:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 08:55:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 09:00:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 09:05:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 09:10:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 09:15:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 09:20:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 09:25:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 09:30:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 09:35:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 09:40:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 09:45:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 09:50:03] "HEAD / HTTP/1.1" 200 -
-INFO:nextcord.client:Got a request to RESUME the websocket.
-INFO:nextcord.gateway:Shard ID None has sent the RESUME payload.
-INFO:nextcord.gateway:Shard ID None has successfully RESUMED session 2b60782cb8d9c24adc04d40d965a8cad under trace ["gateway-prd-us-east1-c-12z6",{"micros":666,"calls":["id_created",{"micros":0,"calls":[]},"session_lookup_time",{"micros":307,"calls":[]},"session_lookup_finished",{"micros":15,"calls":[]},"discord-sessions-prd-2-54",{"micros":24}]}].
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 09:55:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 10:00:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 10:05:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 10:10:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 10:15:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 10:20:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 10:25:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 10:30:03] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 10:30:54] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 10:31:20] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 10:35:03] "HEAD / HTTP/1.1" 200 -
+INFO:root:Received /stable command with prompt: hot sexy milf
+INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 20:24:07] "[35m[1mPOST /webhook HTTP/1.1[0m" 204 -

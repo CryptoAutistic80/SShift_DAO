@@ -22,7 +22,8 @@ async def setup_db():
             safetychecker TEXT,
             seed INTEGER,
             output TEXT,
-            retrieved TEXT DEFAULT 'no'
+            retrieved TEXT DEFAULT 'no',
+            timestamp INTEGER
         )
         """)
 
@@ -45,12 +46,13 @@ async def insert_data(data):
         safetychecker = data["meta"].get("safetychecker")
         seed = data["meta"].get("seed")
         output = data.get("output")[0] if data.get("output") else None  # Taking the first output, if available
+        timestamp = data.get("timestamp")  # Get the timestamp from the data
 
         # Insert data into the table
-        await cursor.execute("""
-        INSERT INTO webhook_data (track_id, id, status, model, prompt, negative_prompt, safetychecker, seed, output)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
-        """, (track_id, id, status, model, prompt, negative_prompt, safetychecker, seed, output))
+        await cursor.execute('''
+        INSERT INTO webhook_data (track_id, id, status, model, prompt, negative_prompt, safetychecker, seed, output, timestamp)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        ''', (track_id, id, status, model, prompt, negative_prompt, safetychecker, seed, output, timestamp))
 
         await conn.commit()
 

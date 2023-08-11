@@ -3,6 +3,7 @@ from src.database_manager import insert_data, setup_db
 from threading import Thread
 from flask import Flask, request
 import asyncio
+import time
 
 # Initialize queue for handling webhooks
 webhook_queue = Queue()
@@ -16,6 +17,7 @@ def home():
 @app.route('/webhook', methods=['POST'])
 def handle_webhook():
     data = request.json
+    data['timestamp'] = int(time.time())  # Add the current UNIX timestamp
     print(f"Received webhook: {data}")  # Print the incoming webhook data
     
     # Push the data to the queue for processing
@@ -56,4 +58,4 @@ loop = asyncio.get_event_loop()
 loop.run_until_complete(setup_db())
 
 # Start the server
-keep_alive()
+keep_alive() 
