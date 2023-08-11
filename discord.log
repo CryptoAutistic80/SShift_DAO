@@ -1,17 +1,20 @@
 WARNING:nextcord.client:PyNaCl is not installed, voice will NOT be supported
 INFO:root:Loading cog: reactor
 INFO:root:Loading cog: text2vid
+INFO:root:Loading cog: stable
+INFO:root:Loading cog: result_output
+INFO:nextcord.client:logging in using static token
 INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:8080
- * Running on http://172.31.196.9:8080
+ * Running on http://172.31.196.5:8080
 INFO:werkzeug:[33mPress CTRL+C to quit[0m
-INFO:root:Loading cog: stable
-INFO:nextcord.client:logging in using static token
+INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 23:25:49] "[33mOPTIONS * HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 23:25:49] "GET / HTTP/1.1" 200 -
 INFO:nextcord.gateway:Shard ID None has sent the IDENTIFY payload.
-INFO:nextcord.gateway:Shard ID None has connected to Gateway: ["gateway-prd-us-east1-c-h2h5",{"micros":92179,"calls":["id_created",{"micros":1981,"calls":[]},"session_lookup_time",{"micros":2530,"calls":[]},"session_lookup_finished",{"micros":13,"calls":[]},"discord-sessions-prd-2-269",{"micros":84934,"calls":["start_session",{"micros":59486,"calls":["discord-api-6785cb845d-dqs5c",{"micros":53754,"calls":["get_user",{"micros":17188},"get_guilds",{"micros":7522},"send_scheduled_deletion_message",{"micros":9},"guild_join_requests",{"micros":1},"authorized_ip_coro",{"micros":11}]}]},"starting_guild_connect",{"micros":52,"calls":[]},"presence_started",{"micros":8360,"calls":[]},"guilds_started",{"micros":103,"calls":[]},"guilds_connect",{"micros":1,"calls":[]},"presence_connect",{"micros":16879,"calls":[]},"connect_finished",{"micros":16884,"calls":[]},"build_ready",{"micros":20,"calls":[]},"clean_ready",{"micros":1,"calls":[]},"optimize_ready",{"micros":25,"calls":[]},"split_ready",{"micros":1,"calls":[]}]}]}] (Session ID: 7e300e1647849a35f89476489dbf3662). Resume URL specified as wss://gateway-us-east1-c.discord.gg
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 20:23:26] "[33mOPTIONS * HTTP/1.1[0m" 404 -
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 20:23:27] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 23:25:49] "GET / HTTP/1.1" 200 -
+INFO:nextcord.gateway:Shard ID None has connected to Gateway: ["gateway-prd-us-east1-c-h43j",{"micros":98596,"calls":["id_created",{"micros":2274,"calls":[]},"session_lookup_time",{"micros":366,"calls":[]},"session_lookup_finished",{"micros":15,"calls":[]},"discord-sessions-prd-2-170",{"micros":95361,"calls":["start_session",{"micros":88636,"calls":["discord-api-75dc479fd4-7sw75",{"micros":75922,"calls":["get_user",{"micros":26031},"get_guilds",{"micros":6884},"send_scheduled_deletion_message",{"micros":9},"guild_join_requests",{"micros":181},"authorized_ip_coro",{"micros":10}]}]},"starting_guild_connect",{"micros":55,"calls":[]},"presence_started",{"micros":316,"calls":[]},"guilds_started",{"micros":89,"calls":[]},"guilds_connect",{"micros":1,"calls":[]},"presence_connect",{"micros":6211,"calls":[]},"connect_finished",{"micros":6217,"calls":[]},"build_ready",{"micros":18,"calls":[]},"clean_ready",{"micros":26,"calls":[]},"optimize_ready",{"micros":1,"calls":[]},"split_ready",{"micros":1,"calls":[]}]}]}] (Session ID: 037981b0b65593b22353bce5b2ec4dae). Resume URL specified as wss://gateway-us-east1-c.discord.gg
+INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 23:25:50] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 23:25:50] "GET / HTTP/1.1" 200 -
 INFO:root:Bot has connected to Discord!
-INFO:root:Received /stable command with prompt: hot sexy milf
-INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 20:24:07] "[35m[1mPOST /webhook HTTP/1.1[0m" 204 -
+INFO:werkzeug:172.31.196.1 - - [11/Aug/2023 23:26:41] "HEAD / HTTP/1.1" 200 -

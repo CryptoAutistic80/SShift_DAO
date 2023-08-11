@@ -27,6 +27,11 @@ async def setup_db():
         )
         """)
 
+        # Create the composite index
+        await cursor.execute("""
+        CREATE INDEX IF NOT EXISTS idx_timestamp_track_id_id_retrieved ON webhook_data(timestamp, track_id, id, retrieved);
+        """)
+
         await conn.commit()
 
 async def insert_data(data):
@@ -56,22 +61,24 @@ async def insert_data(data):
 
         await conn.commit()
 
-async def retrieve_data(track_id=None, id=None):
+async def retrieve_data():
     """
-    Retrieve data from the database based on track_id and/or id.
+    Retrieve data from the database where 'retrieved' is set to "no".
     """
     async with aiosqlite.connect(db_file) as conn:
         cursor = await conn.cursor()
+        await cursor.execute("SELECT * FROM webhook_data WHERE retrieved='no'")
+        entries = await cursor.fetchall()
+        print(f"Retrieved {len(entries)} entries from the database.")
+        return entries
 
-        if track_id and id:
-            await cursor.execute("SELECT * FROM webhook_data WHERE track_id=? AND id=?", (track_id, id))
-        elif track_id:
-            await cursor.execute("SELECT * FROM webhook_data WHERE track_id=?", (track_id,))
-        elif id:
-            await cursor.execute("SELECT * FROM webhook_data WHERE id=?", (id,))
-        else:
-            return []
-
-        return await cursor.fetchall()
-
+async def update_retrieved_status(track_id, id):
+    """
+    Update the 'retrieved' status of an entry in the database to 'yes'.
+    """
+    async with aiosqlite.connect(db_file) as conn:
+        cursor = await conn.cursor()
+        await cursor.execute("UPDATE webhook_data SET retrieved = 'yes' WHERE track_id=? AND id=?", (track_id, id))
+        print(f"Updated retrieved status for track_id: {track_id}, id: {id}")
+        await conn.commit()
 
