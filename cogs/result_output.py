@@ -46,7 +46,8 @@ class Results(commands.Cog):
                 # Send the output to the Discord channel
                 message = await channel.send(entry["output"])
                 if message:
-                    print(f"Successfully sent message {message.id} to channel {channel.name}.")
+                    await message.publish()  # This line publishes the message to followers
+                    print(f"Successfully sent and published message {message.id} to channel {channel.name}.")
                 else:
                     print(f"Failed to send message for entry with track_id: {entry['track_id']} and id: {entry['id']}.")
     
@@ -66,5 +67,6 @@ class Results(commands.Cog):
 
 def setup(bot):
     bot.add_cog(Results(bot))
+
 
 
