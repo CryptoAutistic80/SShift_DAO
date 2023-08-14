@@ -1,25 +1,30 @@
 WARNING:nextcord.client:PyNaCl is not installed, voice will NOT be supported
 INFO:root:Loading cog: reactor
-INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:8080
- * Running on http://172.31.196.67:8080
-INFO:werkzeug:[33mPress CTRL+C to quit[0m
 INFO:root:Loading cog: text2vid
 INFO:root:Loading cog: stable
 INFO:root:Loading cog: result_output
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.31.196.94:8080
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:root:Failed to load cog: result_output. Error: Extension 'cogs.result_output' raised an error: IndentationError: unindent does not match any outer indentation level (result_output.py, line 109)
 INFO:nextcord.client:logging in using static token
-INFO:werkzeug:172.31.196.1 - - [12/Aug/2023 22:21:50] "[33mOPTIONS * HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.31.196.1 - - [14/Aug/2023 15:17:28] "[33mOPTIONS * HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.31.196.1 - - [14/Aug/2023 15:17:28] "GET / HTTP/1.1" 200 -
 INFO:nextcord.gateway:Shard ID None has sent the IDENTIFY payload.
-INFO:werkzeug:172.31.196.1 - - [12/Aug/2023 22:21:50] "HEAD / HTTP/1.1" 200 -
-INFO:nextcord.gateway:Shard ID None has connected to Gateway: ["gateway-prd-us-east1-b-vps3",{"micros":158424,"calls":["id_created",{"micros":1061,"calls":[]},"session_lookup_time",{"micros":330,"calls":[]},"session_lookup_finished",{"micros":23,"calls":[]},"discord-sessions-prd-2-133",{"micros":156642,"calls":["start_session",{"micros":99460,"calls":["discord-api-57f799c865-vbmvv",{"micros":88499,"calls":["get_user",{"micros":45768},"get_guilds",{"micros":5550},"send_scheduled_deletion_message",{"micros":20},"guild_join_requests",{"micros":2},"authorized_ip_coro",{"micros":12}]}]},"starting_guild_connect",{"micros":58,"calls":[]},"presence_started",{"micros":281,"calls":[]},"guilds_started",{"micros":104,"calls":[]},"guilds_connect",{"micros":2,"calls":[]},"presence_connect",{"micros":56690,"calls":[]},"connect_finished",{"micros":56695,"calls":[]},"build_ready",{"micros":15,"calls":[]},"clean_ready",{"micros":26,"calls":[]},"optimize_ready",{"micros":1,"calls":[]},"split_ready",{"micros":0,"calls":[]}]}]}] (Session ID: dd06a06a3b59ef0037b9b8d82ebe8386). Resume URL specified as wss://gateway-us-east1-b.discord.gg
+INFO:nextcord.gateway:Shard ID None has connected to Gateway: ["gateway-prd-us-east1-b-bnt1",{"micros":166694,"calls":["id_created",{"micros":1846,"calls":[]},"session_lookup_time",{"micros":562,"calls":[]},"session_lookup_finished",{"micros":16,"calls":[]},"discord-sessions-prd-2-235",{"micros":163981,"calls":["start_session",{"micros":85065,"calls":["discord-api-57f799c865-vbmvv",{"micros":80364,"calls":["get_user",{"micros":30100},"get_guilds",{"micros":11235},"send_scheduled_deletion_message",{"micros":12},"guild_join_requests",{"micros":2},"authorized_ip_coro",{"micros":11}]}]},"starting_guild_connect",{"micros":73,"calls":[]},"presence_started",{"micros":34054,"calls":[]},"guilds_started",{"micros":86,"calls":[]},"guilds_connect",{"micros":1,"calls":[]},"presence_connect",{"micros":44653,"calls":[]},"connect_finished",{"micros":44657,"calls":[]},"build_ready",{"micros":18,"calls":[]},"clean_ready",{"micros":1,"calls":[]},"optimize_ready",{"micros":24,"calls":[]},"split_ready",{"micros":1,"calls":[]}]}]}] (Session ID: 3f2aca24d060f80b230bd13b73e4a643). Resume URL specified as wss://gateway-us-east1-b.discord.gg
+INFO:werkzeug:172.31.196.1 - - [14/Aug/2023 15:17:29] "GET / HTTP/1.1" 200 -
 INFO:root:Bot has connected to Discord!
-INFO:werkzeug:172.31.196.1 - - [12/Aug/2023 22:26:41] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [12/Aug/2023 22:31:41] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [12/Aug/2023 22:36:41] "HEAD / HTTP/1.1" 200 -
-INFO:root:Received /stable command with prompt: super girl, DC comics
-INFO:werkzeug:172.31.196.1 - - [12/Aug/2023 22:40:52] "[35m[1mPOST /webhook HTTP/1.1[0m" 204 -
-INFO:werkzeug:172.31.196.1 - - [12/Aug/2023 22:41:41] "HEAD / HTTP/1.1" 200 -
-INFO:root:Received /stable command with prompt: DC comics, The Flash, running through central city faster than sound
-INFO:werkzeug:172.31.196.1 - - [12/Aug/2023 22:43:16] "[35m[1mPOST /webhook HTTP/1.1[0m" 204 -
-INFO:werkzeug:172.31.196.1 - - [12/Aug/2023 22:45:36] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [14/Aug/2023 15:21:41] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [14/Aug/2023 15:26:41] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [14/Aug/2023 15:31:41] "HEAD / HTTP/1.1" 200 -
+INFO:root:Received /stable command with prompt: charmander doing errands
+INFO:werkzeug:172.31.196.1 - - [14/Aug/2023 15:34:18] "[35m[1mPOST /webhook HTTP/1.1[0m" 204 -
+INFO:werkzeug:172.31.196.1 - - [14/Aug/2023 15:36:41] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [14/Aug/2023 15:41:41] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [14/Aug/2023 15:46:41] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [14/Aug/2023 15:51:41] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [14/Aug/2023 15:56:41] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [14/Aug/2023 16:01:41] "HEAD / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [14/Aug/2023 16:05:11] "GET / HTTP/1.1" 200 -

@@ -20,6 +20,7 @@ async def setup_db():
             prompt TEXT,
             negative_prompt TEXT,
             safetychecker TEXT,
+            safety_checker_type TEXT,
             seed INTEGER,
             output TEXT,
             retrieved TEXT DEFAULT 'no',
@@ -49,15 +50,16 @@ async def insert_data(data):
         prompt = data["meta"].get("prompt")
         negative_prompt = data["meta"].get("negative_prompt")
         safetychecker = data["meta"].get("safetychecker")
+        safety_checker_type = data["meta"].get("safety_checker_type", "")  # Default to empty string if not available
         seed = data["meta"].get("seed")
         output = data.get("output")[0] if data.get("output") else None  # Taking the first output, if available
         timestamp = data.get("timestamp")  # Get the timestamp from the data
 
         # Insert data into the table
         await cursor.execute('''
-        INSERT INTO webhook_data (track_id, id, status, model, prompt, negative_prompt, safetychecker, seed, output, timestamp)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-        ''', (track_id, id, status, model, prompt, negative_prompt, safetychecker, seed, output, timestamp))
+        INSERT INTO webhook_data (track_id, id, status, model, prompt, negative_prompt, safetychecker, safety_checker_type, seed, output, timestamp)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        ''', (track_id, id, status, model, prompt, negative_prompt, safetychecker, safety_checker_type, seed, output, timestamp))
 
         await conn.commit()
 
@@ -81,4 +83,5 @@ async def update_retrieved_status(track_id, id):
         await cursor.execute("UPDATE webhook_data SET retrieved = 'yes' WHERE track_id=? AND id=?", (track_id, id))
         print(f"Updated retrieved status for track_id: {track_id}, id: {id}")
         await conn.commit()
+
 

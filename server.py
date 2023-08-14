@@ -18,6 +18,11 @@ def home():
 def handle_webhook():
     data = request.json
     data['timestamp'] = int(time.time())  # Add the current UNIX timestamp
+
+    # Check if 'safety_checker_type' is present in the webhook data
+    if 'safety_checker_type' not in data['meta']:
+        data['meta']['safety_checker_type'] = None
+
     print(f"Received webhook: {data}")  # Print the incoming webhook data
     
     # Push the data to the queue for processing
@@ -58,4 +63,5 @@ loop = asyncio.get_event_loop()
 loop.run_until_complete(setup_db())
 
 # Start the server
-keep_alive() 
+keep_alive()
+
