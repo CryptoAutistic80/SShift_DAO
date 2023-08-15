@@ -2,29 +2,17 @@ WARNING:nextcord.client:PyNaCl is not installed, voice will NOT be supported
 INFO:root:Loading cog: reactor
 INFO:root:Loading cog: text2vid
 INFO:root:Loading cog: stable
-INFO:root:Loading cog: result_output
+INFO:nextcord.client:logging in using static token
 INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:8080
- * Running on http://172.31.196.94:8080
+ * Running on http://172.31.196.6:8080
 INFO:werkzeug:[33mPress CTRL+C to quit[0m
-ERROR:root:Failed to load cog: result_output. Error: Extension 'cogs.result_output' raised an error: IndentationError: unindent does not match any outer indentation level (result_output.py, line 109)
-INFO:nextcord.client:logging in using static token
-INFO:werkzeug:172.31.196.1 - - [14/Aug/2023 15:17:28] "[33mOPTIONS * HTTP/1.1[0m" 404 -
-INFO:werkzeug:172.31.196.1 - - [14/Aug/2023 15:17:28] "GET / HTTP/1.1" 200 -
 INFO:nextcord.gateway:Shard ID None has sent the IDENTIFY payload.
-INFO:nextcord.gateway:Shard ID None has connected to Gateway: ["gateway-prd-us-east1-b-bnt1",{"micros":166694,"calls":["id_created",{"micros":1846,"calls":[]},"session_lookup_time",{"micros":562,"calls":[]},"session_lookup_finished",{"micros":16,"calls":[]},"discord-sessions-prd-2-235",{"micros":163981,"calls":["start_session",{"micros":85065,"calls":["discord-api-57f799c865-vbmvv",{"micros":80364,"calls":["get_user",{"micros":30100},"get_guilds",{"micros":11235},"send_scheduled_deletion_message",{"micros":12},"guild_join_requests",{"micros":2},"authorized_ip_coro",{"micros":11}]}]},"starting_guild_connect",{"micros":73,"calls":[]},"presence_started",{"micros":34054,"calls":[]},"guilds_started",{"micros":86,"calls":[]},"guilds_connect",{"micros":1,"calls":[]},"presence_connect",{"micros":44653,"calls":[]},"connect_finished",{"micros":44657,"calls":[]},"build_ready",{"micros":18,"calls":[]},"clean_ready",{"micros":1,"calls":[]},"optimize_ready",{"micros":24,"calls":[]},"split_ready",{"micros":1,"calls":[]}]}]}] (Session ID: 3f2aca24d060f80b230bd13b73e4a643). Resume URL specified as wss://gateway-us-east1-b.discord.gg
-INFO:werkzeug:172.31.196.1 - - [14/Aug/2023 15:17:29] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [15/Aug/2023 18:15:58] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [15/Aug/2023 18:15:58] "[33mOPTIONS * HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.31.196.1 - - [15/Aug/2023 18:15:59] "GET / HTTP/1.1" 200 -
+INFO:nextcord.gateway:Shard ID None has connected to Gateway: ["gateway-prd-us-east1-d-c3dj",{"micros":161260,"calls":["id_created",{"micros":1293,"calls":[]},"session_lookup_time",{"micros":309,"calls":[]},"session_lookup_finished",{"micros":15,"calls":[]},"discord-sessions-prd-2-135",{"micros":159263,"calls":["start_session",{"micros":90247,"calls":["discord-api-6c977478c7-gwptg",{"micros":85554,"calls":["get_user",{"micros":21750},"get_guilds",{"micros":6480},"send_scheduled_deletion_message",{"micros":10},"guild_join_requests",{"micros":3999},"authorized_ip_coro",{"micros":10}]}]},"starting_guild_connect",{"micros":71,"calls":[]},"presence_started",{"micros":41650,"calls":[]},"guilds_started",{"micros":116,"calls":[]},"guilds_connect",{"micros":4,"calls":[]},"presence_connect",{"micros":27126,"calls":[]},"connect_finished",{"micros":27134,"calls":[]},"build_ready",{"micros":21,"calls":[]},"clean_ready",{"micros":22,"calls":[]},"optimize_ready",{"micros":0,"calls":[]},"split_ready",{"micros":1,"calls":[]}]}]}] (Session ID: e0526f63aa077250b10c11fe05b8c449). Resume URL specified as wss://gateway-us-east1-d.discord.gg
+INFO:werkzeug:172.31.196.1 - - [15/Aug/2023 18:15:59] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [15/Aug/2023 18:15:59] "GET / HTTP/1.1" 200 -
 INFO:root:Bot has connected to Discord!
-INFO:werkzeug:172.31.196.1 - - [14/Aug/2023 15:21:41] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [14/Aug/2023 15:26:41] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [14/Aug/2023 15:31:41] "HEAD / HTTP/1.1" 200 -
-INFO:root:Received /stable command with prompt: charmander doing errands
-INFO:werkzeug:172.31.196.1 - - [14/Aug/2023 15:34:18] "[35m[1mPOST /webhook HTTP/1.1[0m" 204 -
-INFO:werkzeug:172.31.196.1 - - [14/Aug/2023 15:36:41] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [14/Aug/2023 15:41:41] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [14/Aug/2023 15:46:41] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [14/Aug/2023 15:51:41] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [14/Aug/2023 15:56:41] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [14/Aug/2023 16:01:41] "HEAD / HTTP/1.1" 200 -
-INFO:werkzeug:172.31.196.1 - - [14/Aug/2023 16:05:11] "GET / HTTP/1.1" 200 -
