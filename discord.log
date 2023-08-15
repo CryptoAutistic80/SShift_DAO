@@ -15,3 +15,5 @@ INFO:werkzeug:172.31.196.1 - - [15/Aug/2023 18:18:12] "GET / HTTP/1.1" 200 -
 INFO:werkzeug:172.31.196.1 - - [15/Aug/2023 18:18:12] "[33mOPTIONS * HTTP/1.1[0m" 404 -
 INFO:werkzeug:172.31.196.1 - - [15/Aug/2023 18:18:12] "GET / HTTP/1.1" 200 -
 INFO:root:Bot has connected to Discord!
+INFO:werkzeug:172.31.196.1 - - [15/Aug/2023 18:19:07] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.31.196.1 - - [15/Aug/2023 18:19:34] "HEAD / HTTP/1.1" 200 -
